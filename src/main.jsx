@@ -11,6 +11,7 @@ ReactGA.send({
   hitType: "pageview",
   page: window.location.pathname,
   title: "Custom Title",
+  deviceCategory: "Device category",
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
