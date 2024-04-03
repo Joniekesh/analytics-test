@@ -23,7 +23,7 @@ const App = () => {
 
     ReactGA.send("pageview", { page: "/" });
 
-    const data = ReactGA.ga("getData");
+    const data = ReactGA.ga("getAll");
     setAnalyticsData(data);
   }, []);
 
