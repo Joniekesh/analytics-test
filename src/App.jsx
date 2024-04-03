@@ -44,7 +44,7 @@ const App = () => {
 
       const responseData = apiResponse.data;
 
-      console.log(responseData);
+      console.log(responseData.rows);
 
       // Process the response to exclude desktop, mobile, and tablet categories
       const filteredRows = responseData.rows.filter(([deviceCategory]) => {
