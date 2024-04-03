@@ -16,6 +16,7 @@ const App = () => {
     if (accessToken) {
       fetchData(accessToken);
     }
+    console.log(accessToken);
   };
 
   const fetchData = async (accessToken) => {
@@ -30,6 +31,8 @@ const App = () => {
         metrics,
         dimensions,
       };
+
+      console.log(requestBody);
 
       const headers = {
         "Content-Type": "application/json",
@@ -55,11 +58,15 @@ const App = () => {
         );
       });
 
+      console.log(filteredRows);
+
       // Calculate the total number of sessions for the filtered categories
       const totalSessions = filteredRows.reduce(
         (total, [, sessions]) => total + parseInt(sessions),
         0
       );
+
+      console.log(totalSessions);
 
       setTotalSessionsForOtherCategories(totalSessions);
     } catch (error) {
